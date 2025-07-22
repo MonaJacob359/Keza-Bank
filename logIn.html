@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        width: auto;
+        height: 85vh;
+        /* background-color: rgba(127, 255, 212, 0.514); */
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .form-container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+     width: 50%;
+    }
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+    button {
+        width: 85%;
+        background-color: green;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+    }
+
+    button:hover {
+        background-color: rgb(1, 97, 1);
+    }
+</style>
+
+<body>
+     <header>
+        <nav>
+            <div class="logo">
+                <img src="/public/logo.png" alt="Logo">
+            </div>
+            <div class="navList">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="SignUp.html" target="_blank">Sign Up</a></li>
+                    <li><a href="logIn.html" target="_blank">Log In</a></li>
+                    <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form class="form-container">
+                <h1>Log In</h1>
+                <div class="item">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="submit-container">
+                    <button type="submit">Log In</button>
+                </div>
+            </form>
+    </main>
+</body>
+
+</html>
