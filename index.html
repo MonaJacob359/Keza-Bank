@@ -8,13 +8,29 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <style>
-    main{
+    main {
         background-image: url('/public/home.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    .welcome{
+        display:block;
+        text-align: justify;
+        border: 1px solid rgb(78, 78, 78);
+        border-radius: 8px;
+    }
+    section{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        gap: 20px;
     }
 </style>
+
 <body>
     <header>
         <nav>
@@ -32,7 +48,32 @@
         </nav>
     </header>
     <main>
-        <h1>Welcome to our Bank </h1>
+        <div class="welcome">
+            <h1 style="text-align: center;">Welcome to KB </h1>
+           <strong> Welcome to Keza Bank,</strong> where innovation meets trust.
+            We're proud to offer a seamless online banking
+            experience designed <br> to make financial
+            services more accessible,  secure, and convenient for you.
+            Whether you're opening your
+            first account or expanding<br> your financial journey,
+            our easy-to-use registration portal empowers you to get
+            started quickly from anywhere, anytime. <br> Join a community that values reliability,
+            progress, and personalized support. Your future with Keza Bank begins here.
+
+        </div>
+        <section>
+            <div style="background-color: red; width: 33%;">
+                MOna 
+            </div>
+            <div style="background-color: blue; width: 33%;">
+                MOna 
+
+            </div>
+            <div style="background-color: green; width: 33%;";>
+                MOna 
+
+            </div>
+        </section>
     </main>
 </body>
 
