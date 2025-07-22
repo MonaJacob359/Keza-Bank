@@ -10,20 +10,20 @@
      <header>
         <nav>
             <div class="logo">
-                <img src="/public/logo.png" alt="Logo">
+                <img src="public/logo.png" alt="Logo">
             </div>
             <div class="navList">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="SignUp.html" target="_blank">Sign Up</a></li>
                     <li><a href="logIn.html" target="_blank">Log In</a></li>
-                    <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                    <li><a href="AboutUs.htm" target="_blank">About Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-        <form>
+    <main> 
+        <form action="register.php" method="post">
             <!-- Personal Information -->
             <div class="form-container">
                 <h2>Personal Information:</h2>
@@ -56,7 +56,7 @@
             <div class="accInfo">
                 <h2>Account Information:</h2>
                 <label for="type">Account Type</label>
-                <select name="AccType" id="type">
+                <select name="accType" id="type">
                     <option value="">Please Select</option>
                     <option value="Priority Banking">Priority Banking</option>
                     <option value="Preferred Banking">Preferred Banking</option>
@@ -65,12 +65,20 @@
                     <option value="Other">Other</option>
                 </select>
                 <label for="category">Account category</label>
-                <select name="AccCategory" id="category">
+                <select name="accCategory" id="category">
                     <option value="">Please Select</option>
                     <option value="Individual">Individual</option>
                     <option value="Joint">Joint</option>
                 </select>
-
+                <label for="typeCurr">Type of Currency:</label>
+                <select name="typeCurr" id="typeCurr">
+                    <option value="">Plese Select</option>
+                    <option value="USA">USA</option>
+                    <option value="SSP">SSP</option>
+                    <option value="SDP">SDP</option>
+                    <option value="RWF">RWF</option>
+                    <option value="EUR">EUR</option>
+                </select>
             </div>
             <div class="submit-container">
                 <button type="submit">Submit</button>
