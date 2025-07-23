@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Account Registration </title>
     <link rel="stylesheet" href="index.css">
 </head>
+<style>
+    main {
+        background-image: url(public/home.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .accItem {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .selectAcc {
+        width: 70%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        color: darkblue;
+    }
+</style>
+
 <body>
-     <header>
+    <header>
         <nav>
             <div class="logo">
                 <img src="public/logo.png" alt="Logo">
@@ -22,11 +48,11 @@
             </div>
         </nav>
     </header>
-    <main> 
+    <main>
         <form action="register.php" method="post">
             <!-- Personal Information -->
+            <h2>Personal Information:</h2>
             <div class="form-container">
-                <h2>Personal Information:</h2>
                 <label for="fullName">Full Name:</label>
                 <input type="text" name="fullName" id="fullName" required>
                 <label for="email">Email</label>
@@ -53,32 +79,38 @@
                 <input type="password" name="conPassword" id="conPassword" required>
             </div>
             <!-- Account Information  -->
+            <h2>Account Information:</h2>
             <div class="accInfo">
-                <h2>Account Information:</h2>
-                <label for="type">Account Type</label>
-                <select name="accType" id="type">
-                    <option value="">Please Select</option>
-                    <option value="Priority Banking">Priority Banking</option>
-                    <option value="Preferred Banking">Preferred Banking</option>
-                    <option value="Private Banking">Private Banking</option>
-                    <option value="Time Deposit">Time Deposit</option>
-                    <option value="Other">Other</option>
-                </select>
-                <label for="category">Account category</label>
-                <select name="accCategory" id="category">
-                    <option value="">Please Select</option>
-                    <option value="Individual">Individual</option>
-                    <option value="Joint">Joint</option>
-                </select>
-                <label for="typeCurr">Type of Currency:</label>
-                <select name="typeCurr" id="typeCurr">
-                    <option value="">Plese Select</option>
-                    <option value="USA">USA</option>
-                    <option value="SSP">SSP</option>
-                    <option value="SDP">SDP</option>
-                    <option value="RWF">RWF</option>
-                    <option value="EUR">EUR</option>
-                </select>
+                <div class="accItem">
+                    <label for="type">Account Type:</label>
+                    <select class="selectAcc" name="accType" id="type">
+                        <option value="">Please Select</option>
+                        <option value="Priority Banking">Priority Banking</option>
+                        <option value="Preferred Banking">Preferred Banking</option>
+                        <option value="Private Banking">Private Banking</option>
+                        <option value="Time Deposit">Time Deposit</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="accItem">
+                    <label for="category">Account category:</label>
+                    <select class="selectAcc" name="accCate" id="category">
+                        <option value="">Please Select</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Joint">Joint</option>
+                    </select>
+                </div>
+                <div class="accItem">
+                    <label for="typeCurr">Type of Currency:</label>
+                    <select class="selectAcc" name="currType" id="typeCurr">
+                        <option value="">Plese Select</option>
+                        <option value="USA">USA</option>
+                        <option value="SSP">SSP</option>
+                        <option value="SDP">SDP</option>
+                        <option value="RWF">RWF</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
             </div>
             <div class="submit-container">
                 <button type="submit">Submit</button>
@@ -86,4 +118,5 @@
         </form>
     </main>
 </body>
+
 </html>

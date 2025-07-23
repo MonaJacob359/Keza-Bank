@@ -2,7 +2,7 @@
 
 <?php
 // DB connection
-$conn = new mysqli("localhost", "root", "", "kezabank");
+$conn = new mysqli("localhost", "root", "", "kb-bank");
 
 // Check connection
 if ($conn->connect_error) {
@@ -22,11 +22,11 @@ $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // hashed passw
 
 // Account info
 $accType = $_POST['accType'];
-$accCategory = $_POST['accCategory'];
-$typeCurr = $_POST['typeCurr'];
+$accCategory = $_POST['accCate'];
+$typeCurr = $_POST['currType'];
 
 // Step 1: Insert into client table
-$clientStmt = $conn->prepare("INSERT INTO cleint (fullName, email, phoneNum, passport, address, dob, gender, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$clientStmt = $conn->prepare("INSERT INTO client (fullName, email, phoneNum, passport, address, dob, gender, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $clientStmt->bind_param("sssssssss", $fullName, $email, $phoneNum, $passport, $address, $dob, $gender, $username, $password);
 $clientStmt->execute();
 
@@ -37,7 +37,7 @@ $client_id = $clientStmt->insert_id;
 $accountNum = "KZB" . rand(100000000, 999999999);
 
 // Step 3: Insert into accountInfo table
-$accStmt = $conn->prepare("INSERT INTO accountinfo (clientid, accType, accCategory, typeCurr, accoutNum) VALUES (?, ?, ?, ?, ?)");
+$accStmt = $conn->prepare("INSERT INTO accountinfo (clientid, accType, accCate, currType, accoutNum) VALUES (?, ?, ?, ?, ?)");
 $accStmt->bind_param("issss", $client_id, $accType, $accCategory, $typeCurr, $accountNum);
 $accStmt->execute();
 
