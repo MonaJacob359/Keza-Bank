@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['client'] = $client;
                 $_SESSION['account'] = $account;
 
-                header("Location: userDetails.php");
+                header("Location: clientAccount.php");
                 exit();
             } else {
                 echo "No account information found.";

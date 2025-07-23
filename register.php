@@ -37,7 +37,7 @@ $client_id = $clientStmt->insert_id;
 $accountNum = "KZB" . rand(100000000, 999999999);
 
 // Step 3: Insert into accountInfo table
-$accStmt = $conn->prepare("INSERT INTO accountinfo (clientid, accType, accCate, currType, accoutNum) VALUES (?, ?, ?, ?, ?)");
+$accStmt = $conn->prepare("INSERT INTO accountinfo (clientid, accType, accCate, currType, accNum) VALUES (?, ?, ?, ?, ?)");
 $accStmt->bind_param("issss", $client_id, $accType, $accCategory, $typeCurr, $accountNum);
 $accStmt->execute();
 

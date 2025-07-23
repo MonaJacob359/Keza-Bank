@@ -2,7 +2,7 @@
 $host = "localhost";       // Usually localhost
 $user = "root";            // Default XAMPP username
 $password = "";            // Default XAMPP password is empty
-$database = "kezabank";    // Your database name
+$database = "kb-bank";    // Your database name
 
 // Create connection
 $conn = new mysqli($host, $user, $password, $database);
