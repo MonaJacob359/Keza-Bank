@@ -11,6 +11,48 @@
     body {
         overflow: hidden;
     }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    section {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .about {
+        display: block;
+        text-align: justify;
+        border: 1px solid rgb(78, 78, 78);
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 15px;
+        width: 50%;
+    }
+
+    section div {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 20%;
+        font-size: 18px;
+        /* padding: 10px; */
+    }
+
+    section div h3 {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: 80%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
 </style>
 
 <body>
@@ -30,7 +72,41 @@
             </div>
         </nav>
     </header>
-    </header>
+    <main>
+        <h1 style="margin: 0; padding: 0;">About us</h1>
+        <div class="about">
+            <strong>KezaBank</strong> is a modern bank that provides safe, easy, and reliable financial
+            services to individuals and businesses. Our goal is to help you manage your
+            money, grow your savings, and achieve your financial goals. We are based in
+            Kigali, Rwanda, and we are expanding to serve more people across the country.
+            At KezaBank, we combine the latest banking technology with friendly customer
+            service to make banking easier for everyone. Whether you need a loan, want to
+            save, or grow your business, KezaBank is here to support you every step of the
+            way.
+        </div>
+        <section class="ourteam">
+            <div>
+                <img src="public/mona.jpg" alt="Mona">
+                <p><strong>D.Data Sciencist</strong></p>
+            </div>
+            <div>
+                <img src="public/singawo.jpg" alt="Singawo">
+                <p><strong>D.Networking</strong></p>
+            </div>
+            <div>
+                <img src="public/singawo.jpg" alt="Singawo">
+                <p><strong>D.Data Sciencist</strong></p>
+            </div>
+            <div>
+                <img src="public/singawo.jpg" alt="Singawo">
+                <p>D.Software Engineering</p>
+            </div>
+            <div>
+                <img src="public/singawo.jpg" alt="Singawo">
+                <p>D.Data Sciencist</p>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
